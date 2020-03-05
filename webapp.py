@@ -23,8 +23,8 @@ for i in range(0, len(Captions)):
     if(hap):
         SortedCap.append(Captions[i])
 
-for j in range(0,len(SortedCap)):
-    print(SortedCap[j])
+#for j in range(0,len(SortedCap)):
+ #   print(SortedCap[j])
 
 @app.route('/')
 def display():
