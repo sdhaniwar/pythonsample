@@ -4,6 +4,7 @@ from flask.app import Flask
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
 
+@app.route('/')
 def display():
     return 'Hey you!!'
 
