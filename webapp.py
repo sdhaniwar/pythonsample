@@ -16,6 +16,10 @@ Captions = ["The only joy in the world is to begin.",
             "Courage is knowing what not to fear.",
             "Find out what you’re afraid of and go live there."]
 
+@app.route('/')
+def display():
+    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
+
 @app.route('/checkF')
 def checkF(feel):
     SortedCap = []
@@ -34,12 +38,6 @@ def checkF(feel):
                     SortedCap.append(Captions[i])
         print(SortedCap[i])
     return SortedCap
-
-@app.route('/')
-def display():
-    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
-
-
 
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
