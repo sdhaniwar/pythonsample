@@ -1,4 +1,4 @@
-from flask import Flask;
+import flask from Flask
 
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
