@@ -32,7 +32,7 @@ for i in range(0, len(Captions)):
 @app.route('/')
 def display():
     return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
-
+@app.route('/capdisplay')
 def capdisplay():
     print("Sorted hai boss")
 #if __name__ == '__main__':
