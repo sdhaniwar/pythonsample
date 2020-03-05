@@ -6,7 +6,7 @@ import re
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
 
-Feelings = ["Happiness","Confused","Fear","Anger","Surprise"]
+Sentiments = ["Happiness","Confused","Fear","Anger","Surprise"]
 
 Captions = ["The only joy in the world is to begin.",
             "Happiness depends upon ourselves.",
@@ -16,7 +16,7 @@ Captions = ["The only joy in the world is to begin.",
 
 @app.route('/')
 def display():
-    return render_template("index.html", len = len(Feelings), Feelings = Feelings)
+    return render_template("index.html", len = len(Sentiments), Sentiments = Sentiments)
 
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
@@ -25,7 +25,7 @@ def display():
 app.run(use_reloader = True, debug=True)
 
 
-@app.route('/checkF/')
+@app.route('/checkF')
 def checkF(feel):
     SortedCap = []
     if(feel=="Happiness"):
