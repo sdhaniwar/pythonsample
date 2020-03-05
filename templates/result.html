@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Captions over feelings!</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>   
+        <body>
+         <div class="container">
+             <div id="accordion" class="card">
+                 <div class="card-header bg-dark">
+                    <span class="btn btn-primary" data-parent="#accordion" data-toggle="collapse"> Happiness</span>
+                    <span class="btn btn-primary" data-parent="#accordion" data-toggle="collapse"> Confused</span>
+                    <span class="btn btn-primary" data-parent="#accordion" data-toggle="collapse"> Fear</span>
+                    <span class="btn btn-primary" data-parent="#accordion" data-toggle="collapse"> Anger</span>
+                    <span class="btn btn-primary" data-parent="#accordion" data-toggle="collapse"> Suprise</span>
+                 </div>
+                 {%for i in range(0,len)%}
+                 <div class="collapse show card-body bg-light fade in" data-parent="#accordion">
+                 {{ SortedCap[i] }}   
+                </div>
+                 {%endfor%}
+                 
+             </div>
+         </div>   
+        </body>
+</html>
