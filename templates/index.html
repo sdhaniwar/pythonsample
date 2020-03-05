@@ -11,10 +11,12 @@
              <div id="accordion" class="card">
                  <div class="card-header bg-dark">
                      {%for i in range(0,len)%}
-                    <span class="btn btn-primary" href="#English" data-parent="#accordion" data-toggle="collapse"> {{Feelings[i]}} </span>
+                    <span class="btn btn-primary" id="{{Feelings[i]}}" href="#English" data-parent="#accordion" data-toggle="collapse"> {{Feelings[i]}} </span>
                      {%endfor%}
                  </div>
-             </div>s
+                 <div id="English" class="collapse show card-body bg-light fade in" data-parent="#accordion">
+                 </div>
+             </div>
          </div>   
         </body>
 </html>
