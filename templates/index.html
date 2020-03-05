@@ -11,7 +11,7 @@
              <div id="accordion" class="card">
                  <div class="card-header bg-dark">
                      {%for i in range(0,len)%}
-                    <span class="btn btn-primary" id= {{Sentiments[i]}} onclick()="checkF('{{Sentiments[i]}}')" data-parent="#accordion" data-toggle="collapse"> {{Sentiments[i]}} </span>
+                    <span class="btn btn-primary" id= {{Sentiments[i]}} onclick()="checkF('{{Sentiments[i]}}')" href="http://localhost:5000/result" data-parent="#accordion" data-toggle="collapse"> {{Sentiments[i]}} </span>
                      {%endfor%}
                  </div>
                  
