@@ -5,11 +5,11 @@ from flask import render_template
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
 
-Cloudplatforms = ["Amazon Web Services","Microsoft Azure","Google Cloud Platform","VMware"]
+Feelings = ["Happiness","Confused","Fear","Anger","Surprise"]
 
 @app.route('/')
 def display():
-    return render_template("index.html", len = len(Cloudplatforms), Cloudplatforms = Cloudplatforms)
+    return render_template("index.html", len = len(Feelings), Feelings = Feelings)
 
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
