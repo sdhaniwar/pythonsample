@@ -5,7 +5,7 @@ from flask.app import Flask
 app = Flask(__name__)
 
 def display():
-    return "Hey you!!"
+    return 'Hey you!!'
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
