@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 Cloudplatforms = ["Amazon Web Services","Microsoft Azure","Google Cloud Platform","VMware"]
 
-@app.route('/display')
+@app.route('/')
 def display():
     return render_template("index.html", len = len(Cloudplatforms), Cloudplatforms = Cloudplatforms)
 
