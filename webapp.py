@@ -18,7 +18,7 @@ Captions = ["The only joy in the world is to begin.",
 def display():
     return render_template("index.html", len = len(Feelings), Feelings = Feelings)
 
-@app.route('/checkF')
+@app.route('/checkF/')
 def checkF(feel):
     SortedCap = []
     if(feel=="Happiness"):
