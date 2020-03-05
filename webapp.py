@@ -33,6 +33,8 @@ for i in range(0, len(Captions)):
 def display():
     return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
 
+def capdisplay():
+    print("Sorted hai boss")
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
     # Engine, a webserver process such as Gunicorn will serve the app. This
