@@ -28,8 +28,7 @@ for j in range(0,len(SortedCap)):
 
 @app.route('/')
 def display():
-    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap),
-                SortedCap = SortedCap)
+    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
 
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
