@@ -1,5 +1,7 @@
 from flask import Flask;
 
+#if entrypoint is not defined, app engine will look for an app
+app = Flask(__name__)
 
 def display():
     print("Digital1")
