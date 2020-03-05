@@ -4,10 +4,7 @@ import flask from Flask
 app = Flask(__name__)
 
 def display():
-    print("Digital1")
-    print("Mainframe")
-    print("Healthcare")
-    print("Java")
+    return "Hey you!!"
 
 if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
