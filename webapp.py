@@ -1,12 +1,10 @@
 
 from flask.app import Flask
-from flask import render_template
+from flask import render_template, url_for, redirect
 import re
 
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
-
-SortedCap = []
 
 Feelings = ["Happiness","Confused","Fear","Anger","Surprise"]
 
@@ -18,7 +16,7 @@ Captions = ["The only joy in the world is to begin.",
 
 @app.route('/')
 def display():
-    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings)
+    return render_template("index.html", len = len(Feelings), Feelings = Feelings)
 
 @app.route('/checkF')
 def checkF(feel):
