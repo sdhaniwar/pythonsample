@@ -24,6 +24,7 @@ def checkF(feel):
             hap = re.search("Happ*|joy", Captions[i])
             if(hap):
                 SortedCap.append(Captions[i])
+        print(SortedCap[i])
     elif(feel=="Fear"):
         for j in range(0,len(SortedCap)):
             fear = re.search("fear",Captions[j])
@@ -31,6 +32,7 @@ def checkF(feel):
                 if(SortedCap):
                     SortedCap = []
                     SortedCap.append(Captions[i])
+        print(SortedCap[i])
     return SortedCap
 
 @app.route('/')
