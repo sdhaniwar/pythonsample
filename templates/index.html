@@ -11,25 +11,14 @@
              <div id="accordion" class="card">
                  <div class="card-header bg-dark">
                      {%for i in range(0,len1)%}
-                    <span class="btn btn-primary" id= {{Feelings[i]}} onclick="capdisplay()" data-parent="#accordion" data-toggle="collapse"> {{Feelings[i]}} </span>
+                    <span class="btn btn-primary" id= {{Feelings[i]}} data-parent="#accordion" data-toggle="collapse"> {{Feelings[i]}} </span>
                      {%endfor%}
                  </div>
-                
-                 <div id="Happiness" class="collapse show card-body bg-light fade in" data-parent="#accordion">
-                    SortedCap[j]
+                 {%for i in range(0,len1)%}
+                 <div id={{Feelings[i]}} class="collapse show card-body bg-light fade in" data-parent="#accordion">
+                    SortedCap
                  </div>
-                 <div id="Confused" class="collapse card-body bg-light fade in" data-parent="#accordion">
-                        Sorted1
-                 </div>
-                 <div id="Fear" class="collapse card-body bg-light fade in" data-parent="#accordion">
-                        Sorted2
-                 </div>
-                 <div id="Anger" class="collapse card-body bg-light fade in" data-parent="#accordion">
-                        Sorted3
-                 </div>
-                 <div id="Surprise" class="collapse card-body bg-light fade in" data-parent="#accordion">
-                        Sorted5
-                 </div>
+                 {%endfor%} 
              </div>
          </div>   
         </body>
