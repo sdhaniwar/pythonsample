@@ -20,7 +20,7 @@ for i in range(0, len(Captions)):
 
 @app.route('/')
 def display():
-    return render_template("index.html", len = len(Feelings), Feelings = Feelings, hap = hap)
+    return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(hap) , hap = hap)
 
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
