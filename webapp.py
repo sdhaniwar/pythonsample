@@ -16,24 +16,27 @@ Captions = ["The only joy in the world is to begin.",
             "Courage is knowing what not to fear.",
             "Find out what you’re afraid of and go live there."]
 
-
-for i in range(0, len(Captions)):
-    #hap = re.search("Happ*|joy", Captions[i])
-    fear = re.search("fear",Captions[i])
-    print(hap)
-    if(hap):
-        SortedCap.append(Captions[i])
-    elif(fear):
-        if(not SortedCap):
-            SortedCap = []
-        SortedCap.append(Captions[i])
-
-for j in range(0,len(SortedCap)):
-    print(SortedCap[j])
+@app.route('/checkF')
+def checkF(feel):
+    SortedCap = []
+    if(feel=="Happiness"):
+        for i in range(0, len(Captions)):
+            hap = re.search("Happ*|joy", Captions[i])
+            if(hap):
+                SortedCap.append(Captions[i])
+    elif(feel=="Fear"):
+        for j in range(0,len(SortedCap)):
+            fear = re.search("fear",Captions[j])
+            if(fear):
+                if(SortedCap):
+                    SortedCap = []
+                    SortedCap.append(Captions[i])
+    return SortedCap
 
 @app.route('/')
 def display():
     return render_template("index.html", len1 = len(Feelings), Feelings = Feelings, len2 = len(SortedCap), SortedCap = SortedCap)
+
 
 
 #if __name__ == '__main__':
