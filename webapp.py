@@ -19,8 +19,11 @@ Captions = ["The only joy in the world is to begin.",
 
 for i in range(0, len(Captions)):
     hap = re.search("Happ*|joy", Captions[i])
+    fear = re.search("fear",Captions[i])
     print(hap)
     if(hap):
+        SortedCap.append(Captions[i])
+    elif(fear):
         SortedCap.append(Captions[i])
 
 #for j in range(0,len(SortedCap)):
