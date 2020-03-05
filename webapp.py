@@ -1,5 +1,6 @@
 
-from flask.app import Flask, render_template
+from flask.app import Flask
+from flask.app import render_template
 
 #if entrypoint is not defined, app engine will look for an app
 app = Flask(__name__)
