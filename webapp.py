@@ -13,11 +13,21 @@ Captions = ["The only joy in the world is to begin.",
             "Happiness depends upon ourselves.",
             "Happy people plan actions, they don’t plan results.",
             "Courage is knowing what not to fear.",
-            "Find out what you’re afraid of and go live there."]
+            "Find out what you’re afraid of and go live there.",
+            "Happiness is a direction, not a place.",
+            "People should find happiness in the little things, like family.",
+            "I just want to be someone, to mean something to anyone…",
+            "sometime hate is just confused love!",
+            "A man in a passion, rides a mad horse.",
+            "A angry man has no good neighbours.",
+            "He who angers you conquers you"]
+
 
 for i in range(0, len(Captions)):
     hap = re.search("Happ|joy", Captions[i])
-    if(hap):
+    fear = re.search("fear", Captions[i])
+    anger = re.search("anger", Captions[i])
+    if(fear):
         SortedCap.append(Captions[i])
 
 @app.route('/')
