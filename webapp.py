@@ -22,7 +22,7 @@ for i in range(0, len(Captions)):
 
 @app.route('/')
 def display():
-    return render_template("index.html", len = len(Sentiments), Sentiments = Sentiments, len1 = len(SortedCap, SortedCap = SortedCap) )
+    return render_template("index.html", len = len(Sentiments), Sentiments = Sentiments, len1 = len(SortedCap), SortedCap = SortedCap) )
 
 #@app.route('/checkF')
 #def checkF(feel):
