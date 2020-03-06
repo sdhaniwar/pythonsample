@@ -18,6 +18,9 @@ Captions = ["The only joy in the world is to begin.",
 def display():
     return render_template("index.html", len = len(Sentiments), Sentiments = Sentiments)
 
+@app.route('/execute')
+def execute():
+    return "executed successfully"
 #if __name__ == '__main__':
     # This is used when running locally only. When deploying to Google App
     # Engine, a webserver process such as Gunicorn will serve the app. This
