@@ -33,7 +33,7 @@ def checkF(feel):
     SortedCap = []
     if(feel=="Happiness"):
         for i in range(0, len(Captions)):
-            hap = re.search("Happ*|joy", Captions[i])
+            hap = re.search("Happ|joy", Captions[i])
             if(hap):
                 SortedCap.append(Captions[i])
         print(SortedCap[i])
